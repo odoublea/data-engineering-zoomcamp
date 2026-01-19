@@ -16,7 +16,7 @@ provider "google" {
 
 resource "google_storage_bucket" "demo-bucket" {
   name          = "instant-maxim-461311-p6-terra-bucket"
-  location      = "US"
+  location      = "EU"
   force_destroy = true
 
   lifecycle_rule {
@@ -31,4 +31,8 @@ resource "google_storage_bucket" "demo-bucket" {
 
 resource "google_compute_network" "vpc_network" {
   name = "terraform-network"
+}
+
+resource "google_bigquery_dataset" "terraform_dataset" {
+  dataset_id = "example_dataset_terraform"
 }
