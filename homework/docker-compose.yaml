@@ -1,0 +1,27 @@
+services:
+  pg-database:
+    image: postgres:18
+    container_name: homework_database
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password234
+      POSTGRES_DB: ny_taxi
+    volumes:
+      - homework_postgres_data:/var/lib/postgresql
+    ports:
+      - "5433:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    ports:
+      - "8085:80"
+
+volumes:
+  homework_postgres_data:
+  pgadmin_data:
