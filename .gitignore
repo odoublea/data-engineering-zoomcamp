@@ -257,3 +257,8 @@ terraform.rc
 test/.terraform/
 homework/*.parquet
 homework/*.csv
+
+service-account.json
+orchestration/service-account.json
+orchestration/.env
+orchestration/.env_encoded
