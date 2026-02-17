@@ -262,3 +262,9 @@ service-account.json
 orchestration/service-account.json
 orchestration/.env
 orchestration/.env_encoded
+
+
+analytical_engineering/target/
+analytical_engineering/dbt_packages/
+analytical_engineering/logs/
+analytical_engineering/dbt_internal_packages/
